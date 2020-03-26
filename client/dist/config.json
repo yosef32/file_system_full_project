@@ -1,0 +1,5 @@
+{
+    "server_host": "localhost",
+    "server_port": "4040",
+    "proto_path": "/./../../proto/service.proto"
+}

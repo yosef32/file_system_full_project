@@ -1,0 +1,38 @@
+{
+  "name": "gruops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "proto": "node proto/import.proto.js",
+    "build": "tsc",
+    "start": "npm run build && node ./dist/src/server.js",
+    "dev": "nodemon ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yosef romano",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.34",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "google-protobuf": "^3.11.4",
+    "grpc": "^1.24.2",
+    "mongoose": "^5.8.1",
+    "nodemon": "^2.0.2",
+    "proto-generator": "^1.2.0",
+    "ts-node": "^8.5.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/google-protobuf": "^3.7.2",
+    "@types/node": "^13.9.3",
+    "grpc-tools": "^1.8.1",
+    "grpc_tools_node_protoc_ts": "^2.5.10",
+    "typescript": "^3.8.3"
+  }
+}

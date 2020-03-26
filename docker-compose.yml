@@ -1,0 +1,32 @@
+version: "3.7"
+
+services: 
+    mongo:
+        image: mongo
+        container_name: 'mongo'
+        ports: 
+            - "27017:27017"
+        volumes: 
+            - data:/var/lib/mongodb
+    server:
+        container_name: 'server'
+ 
+        image: 'go-server'
+        volumes: 
+            - proto:/go/src/app/proto
+        depends_on: 
+            - mongo
+        ports: 
+            - "4040:4040"
+    client:
+        container_name: 'client'
+        image: 'node-client'
+        depends_on: 
+            - server
+        ports: 
+            - "5000:5000"
+volumes:
+    data:
+        driver: "local"
+    proto:
+        driver: "local"
